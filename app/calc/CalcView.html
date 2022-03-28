@@ -1,0 +1,67 @@
+{extends file=$conf->root_path|cat:"/templates/main.html"}
+
+{block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
+
+{block name=content}
+
+<h3>Prosty kalkulator</h2>
+
+
+<form class="pure-form pure-form-stacked" action="{$conf->action_root}calcCompute" method="post">
+    <fieldset>
+        <label for="kwota">Kwota kredytu: </label>
+        <input id="id_kw" type="text" name="kwota" value="{$form->kwota}" /><br />
+        <label for="id_cz">Czas spłaty: </label>
+        <select name="czas">
+            <option value="6m">6 miesięcy</option>
+            <option value="12m">12 miesięcy</option>
+            <option value="2r">2 lata</option>
+            <option value="3r">3 lata</option>
+            <option value="5r">5 lat</option>
+            <option value="10r">10 lat</option>
+            <option value="15r">15 lat</option>
+            <option value="20r">20 lat</option>
+            <option value="25r">25 lat</option>
+        </select><br />
+        <label for="id_op">Oprocentowanie (w %): </label>
+        <input id="id_op" type="text" name="oprocentowanie" value="{$form->oprocentowanie}" /><br />
+    </fieldset>
+    <button type="submit" class="pure-button pure-button-primary">Oblicz</button>
+</form>
+
+<div class="messages">
+
+{* wyświeltenie listy błędów, jeśli istnieją *}
+{if $msgs->isError()}
+	<h4>Wystąpiły błędy: </h4>
+	<ol class="err">
+	{foreach $msgs->getErrors() as $err}
+	{strip}
+		<li>{$err}</li>
+	{/strip}
+	{/foreach}
+	</ol>
+{/if}
+
+{* wyświeltenie listy informacji, jeśli istnieją *}
+{if $msgs->isInfo()}
+	<h4>Informacje: </h4>
+	<ol class="inf">
+	{foreach $msgs->getInfos() as $inf}
+	{strip}
+		<li>{$inf}</li>
+	{/strip}
+	{/foreach}
+	</ol>
+{/if}
+
+{if isset($res->rata)}
+	<h4>Wynik</h4>
+	<p class="res">
+	{$res->rata}
+	</p>
+{/if}
+
+</div>
+
+{/block}
