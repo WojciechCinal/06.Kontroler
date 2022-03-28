@@ -1,6 +1,10 @@
 {extends file=$conf->root_path|cat:"/templates/main.html"}
 
-{block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
+{block name=footer}
+<ul >
+       &copy; Untitled. All rights reserved. Design: <a href="http://html5up.net"> HTML5 UP</a>
+</ul>
+{/block}
 
 {block name=content}
 
@@ -56,7 +60,7 @@
 {/if}
 
 {if isset($res->rata)}
-	<h4>Wynik</h4>
+	<h4>Miesięczna rata:</h4>
 	<p class="res">
 	{$res->rata}
 	</p>

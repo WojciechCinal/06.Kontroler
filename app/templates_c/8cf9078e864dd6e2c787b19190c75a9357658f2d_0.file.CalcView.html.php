@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-03-28 22:27:20
+/* Smarty version 4.1.0, created on 2022-03-28 22:42:52
   from 'C:\xampp\htdocs\06.Kontroler\app\calc\CalcView.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62421a287204a7_32293434',
+  'unifunc' => 'content_62421dcc2b4e99_27775461',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8cf9078e864dd6e2c787b19190c75a9357658f2d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\06.Kontroler\\app\\calc\\CalcView.html',
-      1 => 1648499237,
+      1 => 1648500169,
       2 => 'file',
     ),
   ),
@@ -20,43 +20,47 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62421a287204a7_32293434 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62421dcc2b4e99_27775461 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_50971146062421a2870f013_50545964', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_94934066662421dcc2a6133_56057635', 'footer');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_43748128662421a2870fb49_08928873', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_69480451662421dcc2a6cc1_38981100', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, ($_smarty_tpl->tpl_vars['conf']->value->root_path).("/templates/main.html"));
 }
 /* {block 'footer'} */
-class Block_50971146062421a2870f013_50545964 extends Smarty_Internal_Block
+class Block_94934066662421dcc2a6133_56057635 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_50971146062421a2870f013_50545964',
+    0 => 'Block_94934066662421dcc2a6133_56057635',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
-przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora<?php
+
+<ul >
+       &copy; Untitled. All rights reserved. Design: <a href="http://html5up.net"> HTML5 UP</a>
+</ul>
+<?php
 }
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_43748128662421a2870fb49_08928873 extends Smarty_Internal_Block
+class Block_69480451662421dcc2a6cc1_38981100 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_43748128662421a2870fb49_08928873',
+    0 => 'Block_69480451662421dcc2a6cc1_38981100',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -128,7 +132,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <?php }?>
 
 <?php if ((isset($_smarty_tpl->tpl_vars['res']->value->rata))) {?>
-	<h4>Wynik</h4>
+	<h4>Miesięczna rata:</h4>
 	<p class="res">
 	<?php echo $_smarty_tpl->tpl_vars['res']->value->rata;?>
 

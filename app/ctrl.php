@@ -19,10 +19,4 @@ switch ($action) {
 		$ctrl = new CalcCtrl ();
 		$ctrl->process ();
 	break;
-/*	case 'action1' :
-		// zrób coś innego ...
-	break;
-	case 'action2' :
-		// zrób coś innego ...
-	break; */
 }
